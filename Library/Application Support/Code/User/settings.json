@@ -1,0 +1,64 @@
+{
+  // Main.
+  "workbench.startupEditor": "none",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Rosé Pine Moon",
+
+  "editor.fontSize": 18,
+  "editor.minimap.enabled": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.lineNumbers": "relative",
+
+  // Terminal
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultLocation": "editor",
+  "terminal.integrated.fontSize": 18,
+
+  // Language.
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.rulers": [80],
+  "editor.suggestSelection": "first",
+  "editor.inlineSuggest.enabled": true,
+
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.detectIndentation": true,
+  "editor.tabSize": 2,
+
+  // Specific rules.
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code"
+  },
+
+  "[php]": {
+    "editor.defaultFormatter": "valeryanm.vscode-phpsab",
+    "editor.tabSize": 4,
+    "editor.indentSize": "tabSize"
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+
+  "[makefile]": {
+    "editor.insertSpaces": false
+  }
+}
