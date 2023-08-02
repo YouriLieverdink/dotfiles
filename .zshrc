@@ -1,6 +1,7 @@
 # Shortcuts
 alias reload="source ~/.zshrc"
 alias _="sudo"
+alias vi="nvim"
 
 # Directories
 alias ..="cd .."
@@ -19,5 +20,5 @@ alias nd="npm run dev"
 # Exports
 export PATH="/opt/homebrew/bin:$PATH"
 
-# Manage dotfiles
+# Dotfiles
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
