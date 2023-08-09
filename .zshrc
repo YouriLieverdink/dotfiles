@@ -30,6 +30,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 # Dotfiles
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
+# Use macos option key to move through words
 bindkey -e
 bindkey '\e\e[C' forward-word
 bindkey '\e\e[D' backward-word
