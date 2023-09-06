@@ -1,0 +1,11 @@
+gui:
+  showBottomLine: false
+  theme:
+    activeBorderColor:
+      - white
+      - bold
+    selectedLineBgColor:
+      - default
+  nerdFontsVersion: '3'
+  showBranchCommitHash: true
+  border: 'rounded'
