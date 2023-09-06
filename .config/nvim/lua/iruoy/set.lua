@@ -21,4 +21,10 @@ vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 
 -- Column at 80 characters
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80,120"
+
+-- Colorscheme
+vim.cmd('colorscheme rose-pine');
+
+-- Disable line wrap
+vim.opt.wrap = false

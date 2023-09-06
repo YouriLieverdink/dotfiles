@@ -1,3 +1,6 @@
 [user]
 	name = Youri Lieverdink
 	email = 89806453+YouriLieverdink@users.noreply.github.com
+
+[commit]
+    template = ~/.config/git/commit-template

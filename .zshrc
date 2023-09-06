@@ -9,7 +9,7 @@ alias push='git push'
 alias add='git add'
 alias pull='git pull'
 
-alias c="code"
+alias c="code ./"
 
 # Directories
 alias ..="cd .."
@@ -17,15 +17,13 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# Npm
-alias ni="npm install"
-alias nu="npm uninstall"
-alias nup="npm update"
-alias nri="rm -r node_modules && npm install"
-alias nrd="npm run dev"
+# Php
+alias php@8.0="brew unlink php && brew link php@8.0 --force --overwrite"
+alias php@latest="brew unlink php@8.0 && brew link php --force --overwrite"
 
-# Exports
+# Path
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 # Dotfiles
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
@@ -34,3 +32,7 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 bindkey -e
 bindkey '\e\e[C' forward-word
 bindkey '\e\e[D' backward-word
+
+# The fuck
+eval $(thefuck --alias)
+

@@ -46,8 +46,19 @@ return require('packer').startup(function(use)
 		}
 	}
 
-    -- Training program
+    -- Rosepine theme
     use {
-        'ThePrimeagen/vim-be-good'
+        'rose-pine/neovim', as = 'rose-pine'
     }
+
+    -- Nvim tree
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
+    }
+
+    -- Tabs
+    use 'romgrk/barbar.nvim'
 end)
