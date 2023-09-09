@@ -10,22 +10,19 @@ lsp.set_sign_icons({
 })
 
 lsp.on_attach(function(client, buffer)
-	local opts = {buffer = buffer, remap = false}
+    local map = function (mode, lhs, rhs)
+        local opts = {buffer = buffer, remap = false}
 
-    -- See definition, and move between definitions
-	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-	vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-	vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-	vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-    
-    -- Find possible code actions
-	vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
+        vim.keymap.set(mode, lhs, rhs, opts)
+    end
 
-    -- Find all references
-	vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
+    lsp.default_keymaps({buffer = buffer})
 
-    -- Rename a symbol
-	vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+    if (client.name == 'eslint' or client.name == 'volar') then
+        map('n', '<F3>', '<cmd>EslintFixAll<cr>', opts);
+    else
+        map('n', '<F3>', vim.lsp.buf.format, opts);
+    end
 end)
 
 lsp.setup()
