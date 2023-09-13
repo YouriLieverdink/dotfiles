@@ -11,7 +11,7 @@ lsp.set_sign_icons({
 
 lsp.on_attach(function(client, buffer)
     local map = function (mode, lhs, rhs)
-        local opts = {buffer = buffer, remap = false}
+        local opts = {buffer = buffer, remap = true}
 
         vim.keymap.set(mode, lhs, rhs, opts)
     end

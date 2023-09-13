@@ -58,7 +58,4 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons',
         },
     }
-
-    -- Tabs
-    use 'romgrk/barbar.nvim'
 end)
